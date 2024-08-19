@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_fixed">
+
+    <fragment
+        android:id="@+id/navigation_adaptive"
+        android:name="com.nom.banner.ui.adaptive.AdaptiveBannerFragment"
+
+        tools:layout="@layout/fragment_adaptive" />
+
+    <fragment
+        android:id="@+id/navigation_fixed"
+        android:name="com.nom.banner.ui.fixed.FixedBannerFragment"
+
+        tools:layout="@layout/fragment_fixed" />
+
+    <fragment
+        android:id="@+id/navigation_collapsible"
+        android:name="com.nom.banner.ui.collapsible.CollapsibleBannerFragment"
+
+        tools:layout="@layout/fragment_collapsible" />
+</navigation>

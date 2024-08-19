@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/bannerAdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Select Fixed Size Banner Type" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@id/radioBanner"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioBanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:buttonTint="@color/black"
+                        android:text="BANNER" />
+
+                    <RadioButton
+                        android:id="@+id/radioFullBanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:buttonTint="@color/black"
+                        android:text="FULL_BANNER" />
+
+                    <RadioButton
+                        android:id="@+id/radioLargeBanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="LARGE_BANNER" />
+
+                    <RadioButton
+                        android:id="@+id/radioLeaderboard"
+                        android:layout_width="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="LEADERBOARD" />
+
+                    <RadioButton
+                        android:id="@+id/radioMediumRectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="MEDIUM_RECTANGLE" />
+
+                    <RadioButton
+                        android:id="@+id/radioSkyscraper"
+                        android:layout_width="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="WIDE_SKYSCRAPER" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLoadAndShowBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Load And Show Fixed Banner "
+            app:backgroundTint="@color/black" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
